@@ -31,12 +31,12 @@ You can run command `cd src/ && make test` to :
 * Build local image (name myonlinebookstore_lambda_book:latest)
 * Run container from this image.
 
-When the container is ready, your Lambda (running with Docker) will wait to be invoked. Open a new terminal and run `cd src/ && make run-test-query-local` : 
+When the container is ready, your Lambda (running with Docker) will wait to be invoked. Open a new terminal and run `cd src/ && make run-test-query-local` :
 
 ```bash
 MacbookPro-2:src jchauvet$ make run-test-query-local
 {"statusCode": 200, "body": {"body": "{\"book\": {\"isbn\": \"978-0-10-886465-0\", \"title\": \"Chance keep candidate back all.\", \"author\": \"James Gonzalez\", \"stock\": \"4\"}}"}}
-MacbookPro-2:src jchauvet$ 
+MacbookPro-2:src jchauvet$
 ```
 
 ### On AWS
@@ -210,7 +210,7 @@ generate-bookLambdaFunctionQualifiedArn: arn:aws:lambda:us-east-1:001122334455:f
 ServiceEndpoint: https://xxyyzzaabb.execute-api.us-east-1.amazonaws.com/dev/
 ServerlessDeploymentBucketName: myonlinebookstore-dev-serverlessdeploymentbucket-randomserverlessstring
 
-MacbookPro-2:src jchauvet$ 
+MacbookPro-2:src jchauvet$
 ```
 
 When your Lambda is deploy, you can execute command `cd src/ && make-run-test-aws` :
@@ -223,7 +223,7 @@ MacbookPro-2:src jchauvet$ make run-test-query-aws
         "body": "{\"book\": {\"isbn\": \"978-0-10-548818-7\", \"title\": \"Although employee operation least better close.\", \"author\": \"Peter Smith\", \"stock\": \"19\"}}"
     }
 }
-MacbookPro-2:src jchauvet$ 
+MacbookPro-2:src jchauvet$
 ```
 
 ## Roadmap
