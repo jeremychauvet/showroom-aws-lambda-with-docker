@@ -3,6 +3,8 @@
 Showroom to demonstrate how to use Docker image with AWS Lambda
 This Lambda function generate a book when invoked.
 
+![hero](docs/hero.png)
+
 ## Prerequisites
 
 * [Serverless](https://www.serverless.com)
