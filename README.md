@@ -228,5 +228,5 @@ MacbookPro-2:src jchauvet$
 
 ## Roadmap
 
-* [] Parsing payload to generate number of books given in parameter.
-* [] Adding X-Ray.
+* [ ] Parsing payload to generate number of books given in parameter.
+* [ ] Adding X-Ray.
