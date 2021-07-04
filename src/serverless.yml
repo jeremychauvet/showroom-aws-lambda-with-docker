@@ -1,0 +1,42 @@
+service: myonlinebookstore
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: python3.8
+  lambdaHashingVersion: '20201221'
+  region: us-east-1
+  stage: dev
+  memorySize: 128
+  timeout: 90
+  logs:
+    http: true
+  ecr:
+    images:
+      myonlinebookstore_lambda_book:
+        path: ./
+
+package:
+  patterns:
+    - '!*.md'
+    - '!*.txt'
+    - '!Makefile'
+    - '!package-lock.json'
+    - '!node_modules'
+    - '!__pycache__'
+    - '!Dockerfile'
+
+functions:
+  generate-book:
+    description: Lambda used to randomly create book informations.
+    tracing: true # X-Ray.
+    tags:
+      CreatedBy: Terraform
+      Project: MyOnlineBookStore
+      Runtime: python3.8
+    events:
+      - http:
+          path: /
+          method: get
+    image:
+      name: myonlinebookstore_lambda_book
